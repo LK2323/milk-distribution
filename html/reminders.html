@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders & Notifications - Milk & Water Distribution</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Milk & Water Distribution Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="products.html">Products & Inventory</a></li>
+                <li><a href="customers.html">Customers</a></li>
+                <li><a href="delivery.html">Delivery</a></li>
+                <li><a href="orders.html">Orders & Subscriptions</a></li>
+                <li><a href="billing.html">Billing & Payments</a></li>
+                <li><a href="reminders.html">Reminders</a></li>
+                <li><a href="vehicles.html">Vehicles</a></li>
+                <li><a href="accounts.html">Accounts & Reports</a></li>
+                <li><a href="users.html">User Roles</a></li>
+            </ul>
+        </nav>
+        <button id="print-btn" class="print-btn">Print PDF</button>
+    </header>
+    <main>
+        <section id="reminders">
+            <h2>Reminder & Notification System</h2>
+            <h3>Automated Reminders</h3>
+            <form id="send-reminder-form">
+                <label for="reminder-type">Type:</label>
+                <select id="reminder-type">
+                    <option value="payment">Payment Due</option>
+                    <option value="delivery">Delivery Issue</option>
+                    <option value="stock">Stock Change</option>
+                </select>
+                <label for="customer-reminder">Customer:</label>
+                <select id="customer-reminder" required>
+                    <!-- Customer options will be populated here -->
+                </select>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <label for="channel">Channel:</label>
+                <select id="channel">
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="sms">SMS</option>
+                    <option value="email">Email</option>
+                </select>
+                <button type="submit">Send Reminder</button>
+            </form>
+            <h3>Recent Reminders</h3>
+            <table id="reminders-table">
+                <thead>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Type</th>
+                        <th>Message</th>
+                        <th>Channel</th>
+                        <th>Date Sent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Reminder data will be populated here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Milk & Water Distribution System</p>
+    </footer>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

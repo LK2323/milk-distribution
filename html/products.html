@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products & Inventory - Milk & Water Distribution</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Distribution Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="products.html">Products & Inventory</a></li>
+                <li><a href="customers.html">Customers</a></li>
+                <li><a href="delivery.html">Delivery</a></li>
+                <li><a href="orders.html">Orders & Subscriptions</a></li>
+                <li><a href="billing.html">Billing & Payments</a></li>
+                <li><a href="reminders.html">Reminders</a></li>
+                <li><a href="vehicles.html">Vehicles</a></li>
+                <li><a href="accounts.html">Accounts & Reports</a></li>
+                <li><a href="users.html">User Roles</a></li>
+            </ul>
+        </nav>
+        <button id="print-btn" class="print-btn">Print PDF</button>
+    </header>
+    <main>
+        <section id="product-management">
+            <h2>Product & Inventory Management</h2>
+            <form id="add-product-form">
+                <h3>Add/Edit Product</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="product-name">Product Name:</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="brand-name">Brand Name:</label>
+                        <input type="text" id="brand-name" placeholder="e.g., Amul, Nestle">
+                    </div>
+                    <div class="form-group">
+                        <label for="product-type">Type:</label>
+                        <input type="text" id="product-type" placeholder="e.g., Milk, Water" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inward-date">Inward Date:</label>
+                        <input type="date" id="inward-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="inward-quantity">Inward Quantity:</label>
+                        <input type="number" id="inward-quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="outward-date">Outward Date:</label>
+                        <input type="date" id="outward-date">
+                    </div>
+                    <div class="form-group">
+                        <label for="outward-quantity">Outward Quantity:</label>
+                        <input type="number" id="outward-quantity">
+                    </div>
+                    <div class="form-group">
+                        <label for="batch">Batch:</label>
+                        <input type="text" id="batch">
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date:</label>
+                        <input type="date" id="expiry">
+                    </div>
+                    <div class="form-group button-group">
+                        <button type="submit">Add Product</button>
+                    </div>
+                </div>
+            </form>
+            <h3>Current Stock</h3>
+            <table id="stock-table">
+                <thead>
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Brand Name</th>
+                        <th>Product Name</th>
+                        <th>Type</th>
+                        <th>Inward Date</th>
+                        <th>Inward Quantity</th>
+                        <th>Outward Date</th>
+                        <th>Outward Quantity</th>
+                        <th>Batch</th>
+                        <th>Expiry</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Stock items will be populated here -->
+                </tbody>
+            </table>
+        </section>
+        <section id="stock-alerts">
+            <h2>Low Stock Alerts</h2>
+            <ul id="alerts-list">
+                <li>Milk packets below threshold</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Milk & Water Distribution System</p>
+    </footer>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders & Subscriptions - Milk & Water Distribution</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Milk & Water Distribution Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="products.html">Products & Inventory</a></li>
+                <li><a href="customers.html">Customers</a></li>
+                <li><a href="delivery.html">Delivery</a></li>
+                <li><a href="orders.html">Orders & Subscriptions</a></li>
+                <li><a href="billing.html">Billing & Payments</a></li>
+                <li><a href="reminders.html">Reminders</a></li>
+                <li><a href="vehicles.html">Vehicles</a></li>
+                <li><a href="accounts.html">Accounts & Reports</a></li>
+                <li><a href="users.html">User Roles</a></li>
+            </ul>
+        </nav>
+        <button id="print-btn" class="print-btn">Print PDF</button>
+    </header>
+    <main>
+        <section id="order-management">
+            <h2>Order & Subscription System</h2>
+            <form id="create-order-form">
+                <h3>Create Order</h3>
+                <label for="customer-select">Customer:</label>
+                <select id="customer-select" required>
+                    <!-- Customer options will be populated here -->
+                </select>
+                <label for="product-select">Product:</label>
+                <select id="product-select" required>
+                    <!-- Product options will be populated here -->
+                </select>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" required>
+                <label for="frequency">Frequency:</label>
+                <select id="frequency">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                </select>
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" required>
+                <button type="submit">Create Order</button>
+            </form>
+            <h3>Active Orders</h3>
+            <table id="orders-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Frequency</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Order data will be populated here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Milk & Water Distribution System</p>
+    </footer>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
